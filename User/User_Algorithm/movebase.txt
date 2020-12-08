@@ -1,0 +1,12 @@
+void OutputVel2Wheel(float vel, float direction, float omega);
+wheelVel_t CalcWheelSpeed(float vel , float direction , float omega , float angleN, float postureAngle);
+将控制值转化为各轮系的速度与方向 车体速度坐标系——>轮系速度坐标系
+
+void WheelVelControl(wheel_t wheelVel);
+该函数将世界坐标系控制值先后转换到车体坐标系和轮系坐标系，计算出控制值后发送至PID计算
+
+
+
+功能类函数
+AngleLimit(&float);
+float ReturnLimitAngle(float angle);
